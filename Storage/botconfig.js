@@ -1,5 +1,5 @@
 {
-  "prefix": "!",
+  "prefix": "_",
   "red": "#b70000",
   "orange": "#ff6a00",
   "green": "#00ff26",
