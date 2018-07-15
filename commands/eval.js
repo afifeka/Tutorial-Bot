@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args, color, prefix) => {
-    if (message.author.id !== '383600553537699840' && message.author.id !== '428402923144216576') return;
+module.exports.run = async (bot, message, args) => {
+    if (message.author.id !== '383600553537699840' && message.author.id !== '428402923144216576') return message.channel.send("Only My Owner!");
     try {
         let codein = args.join(" ");
         let code = eval(codein);
@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args, color, prefix) => {
             code = require('util').inspect(code, { depth: 0 });
         let embed = new Discord.RichEmbed()
         .setAuthor('Evaluate')
-        .setColor(color)
+        .setColor("RANDOM")
         .addField(':inbox_tray: Input', `\`\`\`js\n${codein}\`\`\``)
         .addField(':outbox_tray: Output', `\`\`\`js\n${code}\n\`\`\``)
         message.channel.send(embed)
@@ -20,8 +20,5 @@ module.exports.run = async (bot, message, args, color, prefix) => {
 }
 
 module.exports.help = {
-    name: 'eval',
-    aliases: ['ev'],
-    description: 'only my onwer can use this command',
-    usage: '_eval [some javascript code]'
+    name: 'eval'
 }
