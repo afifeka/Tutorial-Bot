@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    if (message.author.id !== '383600553537699840') return message.channel.send("Only My Owner!");
+    if (message.author.id !== '401327121580032000') return message.channel.send("Invalid Permission.");
     try {
         let codein = args.join(" ");
         let code = eval(codein);
