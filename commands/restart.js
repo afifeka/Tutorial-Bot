@@ -8,10 +8,9 @@ module.exports.run = async (bot, message, args) => {
 	.addField("Restarting Bot/Reboot", "Reconeccting....")
 	.setColor("RED")
 	.setFooter("Command Only For My Owner")
-	message.channel.send(restard)
+	return message.channel.send(restard);
 	
 	process.exit(103)
-	return;
 }
 
 module.exports.help = {
